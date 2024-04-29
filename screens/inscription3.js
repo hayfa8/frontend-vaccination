@@ -57,7 +57,7 @@ export default function Inscription3() {
                     paddingTop: 50,
                     paddingBottom: 50,
                     top:-10,
-                    height:880,
+                    height:960,
                     
                 }}>
                 <Text 
@@ -67,6 +67,7 @@ export default function Inscription3() {
                         fontWeight: "bold",
                         marginBottom: 20,
                         marginLeft: 100,
+                        marginTop:5,
                     }}>
                     {"S'inscrire Médecin"}
                 </Text>
@@ -83,7 +84,28 @@ export default function Inscription3() {
                         marginHorizontal: 32,
                     }}>
                     <TextInput
-                        placeholder='Nom et Prénom' 
+                        placeholder='Nom' 
+                        style = {{
+                            color: "#000000",
+                            fontSize: 15,
+                            fontWeight: "bold",
+                        }}>
+                    </TextInput>
+                  </View>
+                  <View 
+                    style = {{
+                        backgroundColor: "#ffffff",
+                        borderColor: "#7776c7",
+                        borderTopLeftRadius: 15,
+                        borderBottomRightRadius: 15,
+                        borderWidth: 1,
+                        paddingVertical: 11,
+                        paddingHorizontal: 7,
+                        marginBottom: 31,
+                        marginHorizontal: 32,
+                    }}>
+                    <TextInput
+                        placeholder='Prénom' 
                         style = {{
                             color: "#000000",
                             fontSize: 15,
@@ -279,7 +301,7 @@ export default function Inscription3() {
 						marginHorizontal: 34,
 						}}>
 					<TextInput
-            placeholder='Mot de passe'
+            placeholder='Confirmer le mot de passe'
             secureTextEntry={IsPasswordShown} 
 						style = {{
 						color: "#000000",

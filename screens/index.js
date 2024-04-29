@@ -14,7 +14,9 @@ import Initmdps2 from "./initmod2";
 import Initmdps3 from "./initmod3";
 import Initmdps4 from "./initmod4";
 import Initmdps5 from "./initmod5";
-import Gestion from "./gestion";
+import Ajoutvaccins from "./ajoutervaccin";
+import Listevaccins from "./listevaccins";
+import Déconnexion from "./déconnexion";
 
 
 
@@ -37,5 +39,7 @@ export {
     Initmdps3,
     Initmdps4,
     Initmdps5,
-    Gestion,
+    Listevaccins,
+    Ajoutvaccins,
+    Déconnexion
 };
