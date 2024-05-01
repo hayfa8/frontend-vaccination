@@ -3,7 +3,8 @@ import { StyleSheet, Text, View, ScrollView, SafeAreaView, Image, FlatList,Touch
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
-export default function Listevaccins() {
+
+export default function Listevaccins({navigation}) {
   const [vaccin, setVaccin] = useState([
     {
       date: "2024/02/01",
@@ -20,10 +21,10 @@ export default function Listevaccins() {
             <Text style={styles.vaccinInfo1}>{vaccin.date}</Text>
             <Text style={styles.vaccinInfo2}>{vaccin.nom}</Text>
             <Text style={styles.vaccinInfo3}>{vaccin.type}</Text>
-            <TouchableOpacity style={styles.icons}>
-                <Ionicons name='eye' size={24} color="magenta" style={{right:120}}/>
+            <TouchableOpacity style={styles.icons}  >
+                <Ionicons name='eye' size={24} color="magenta" style={{right:120}} onPress={() => navigation.navigate('Consultervacc')}/>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.icons}>
+            <TouchableOpacity style={styles.icons} >
                 <MaterialIcons name="edit" size={24} color="magenta" style={{right:100}} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons}>

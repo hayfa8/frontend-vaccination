@@ -17,6 +17,8 @@ import Initmdps5 from "./initmod5";
 import Ajoutvaccins from "./ajoutervaccin";
 import Listevaccins from "./listevaccins";
 import Déconnexion from "./déconnexion";
+import Consultervacc from "./consultervacc";
+import Route from "./rootStack";
 
 
 
@@ -41,5 +43,7 @@ export {
     Initmdps5,
     Listevaccins,
     Ajoutvaccins,
-    Déconnexion
+    Déconnexion,
+    Consultervacc,
+    Route
 };

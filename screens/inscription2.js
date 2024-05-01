@@ -35,7 +35,6 @@ export default function Inscription2() {
             style = {{
                 flex: 1,
                 backgroundColor:"#9dd0ff",  
-                
             }}>
             <View 
                 style = {{

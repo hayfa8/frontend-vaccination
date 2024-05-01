@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, View, SafeAreaView, Image, Text, TouchableOpacity, TextInput } from 'react-native';
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
 import { DrawerItemList, createDrawerNavigator } from '@react-navigation/drawer';
 import Accueil from './accueiladmin';
 import ComptesMédecins from './comptesmédecins';
@@ -12,15 +11,13 @@ import Listevaccins from './listevaccins';
 import { FontAwesome5, Entypo, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
 import { Icon } from 'react-native-elements';
 
+
+
 const Drawer = createDrawerNavigator();
 
 export default function DrawerH() {
-  const handleLogout = () => {
-    // Mettez ici le code pour déconnecter l'utilisateur
-    console.log('Déconnexion de l\'utilisateur');
-  };
+
   return (
-    <NavigationContainer>
       <Drawer.Navigator
         drawerContent={(props) => {
           return (
@@ -177,7 +174,7 @@ export default function DrawerH() {
 
         }}
         />
-        <Drawer.Screen name="Liste vaccins" component={Listevaccins} options={() => ({
+        <Drawer.Screen name="Liste vaccins" component={Listevaccins}  options={() => ({
           drawerLabel: "Liste des vaccins",
           title: "",
           drawerLabelStyle: {
@@ -240,10 +237,9 @@ export default function DrawerH() {
         })}
         />
 
-        <Drawer.Screen name="Déconnexion" component={Déconnexion}onPress={handleLogout} options={{
+        <Drawer.Screen name="Déconnexion" component={Déconnexion} options={{
           drawerLabel: "Déconnexion",
           title: "",
-          
           headerShadowVisible: false,
           drawerLabelStyle: {
             right: 45,
@@ -258,7 +254,6 @@ export default function DrawerH() {
 
         }} />
       </Drawer.Navigator>
-    </NavigationContainer>
   )
 }
 const styles = StyleSheet.create({
