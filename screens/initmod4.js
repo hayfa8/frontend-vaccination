@@ -1,12 +1,10 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView, Text, View,TextInput , TouchableOpacity,} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-export default function Initmdps4() {
+export default function initmod4() {
     const [ IsPasswordShown, setIsPasswordShown] = React.useState(false);
   return (
     <SafeAreaView 
@@ -38,7 +36,6 @@ export default function Initmdps4() {
                     marginLeft: 30,
                     marginTop: 10,
                     marginBottom: 30,
-                    bottom:10,
                 }}>
                 {"Écrivez s'il vous plaît votre nouveau mot de passe :"}
             </Text>
@@ -52,7 +49,6 @@ export default function Initmdps4() {
                     marginHorizontal: 33,
                     marginTop: 50,
                     opacity: 0.7,
-                    bottom:5,
                 }}>
                 <TextInput
                     placeholder='Nouveau mot de passe'
@@ -73,7 +69,6 @@ export default function Initmdps4() {
                     marginHorizontal: 33,
                     marginTop: 50,
                     opacity: 0.7,
-                    bottom:5,
                 }}>
                 <TextInput
                     placeholder='Confirmez le mot de passe'
@@ -94,7 +89,6 @@ export default function Initmdps4() {
                     marginTop: 20,
                     marginHorizontal: 100,
                     opacity: 0.8,
-                    bottom:5,
                     
                 }}>
                     <Text 

@@ -8,7 +8,7 @@ import { FontAwesome } from '@expo/vector-icons/FontAwesome';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-export default function Initmdps2() {
+export default function initmod2() {
     const [ IsPasswordShown, setIsPasswordShown] = React.useState(true);
     const onPress = () => {navigation.goBack();};
   return (

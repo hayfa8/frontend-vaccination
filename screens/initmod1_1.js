@@ -1,12 +1,10 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView, Text, View,TextInput , TouchableOpacity,} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-export default function Initmdps3() {
+export default function Initmod1_1({navigation}) {
     const [ IsPasswordShown, setIsPasswordShown] = React.useState(false);
   return (
     <SafeAreaView 
@@ -27,29 +25,57 @@ export default function Initmdps3() {
             style = {{
                 backgroundColor: "#FEE0FF",
                 paddingTop: 200,
-                paddingBottom: 500,
+                paddingBottom: 400,
                
             }}>
             <Text 
                 style = {{
-                    color: "#0D45A1",
+                    color: "#0d49ae",
                     fontSize: 15,
                     fontWeight: "bold",
                     marginLeft: 30,
                     marginTop: 10,
-                    marginBottom: 30,
-                    bottom:10,
+                    marginBottom: 40,
                 }}>
-                {"vous allez recevoir un code sur ce numero :+216*****179"}
+                {"Veuillez entrer votre numéro de téléphone pour rechercher à votre compte:"}
             </Text>
+            <View 
+                style = {{
+                    backgroundColor: "#ffffff",
+                    borderRadius: 10,
+                    paddingVertical: 14,
+                    paddingHorizontal: 27,
+                    marginBottom: 20,
+                    marginHorizontal: 33,
+                    marginTop: 50,
+                    opacity: 0.7,
+                }}>
+                <TextInput
+                    placeholder='Numéro mobile'
+                    keyboardType="numeric"
+                    style = {{
+                        color: "#000000",
+                        fontSize: 15,
+                        fontWeight: "bold",
+                    }}>
+                </TextInput>
+            </View>
+            <TouchableOpacity onPress={() =>navigation.navigate("initmod1_2")} >
+            <Text style = {{
+                    color: "#0D45A1",
+                    fontSize: 12,
+                    marginLeft: 50,
+                    fontWeight: "bold",
+                    marginBottom: 40
+                }}>Rechercher avec votre adresse e-mail"</Text>
+                </TouchableOpacity>
             <View>
                 <TouchableOpacity  style = {{
                     alignItems: "center",
                     backgroundColor: "#ED87EF",
                     borderRadius: 40,
                     paddingVertical: 10,
-                    marginBottom: 31,
-                    marginTop: 80,
+                    marginTop: 25,
                     marginHorizontal: 100,
                     opacity: 0.8,
                     

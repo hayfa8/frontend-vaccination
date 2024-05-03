@@ -1,13 +1,10 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView, Text, View,TextInput , TouchableOpacity,} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-
-export default function Initmdps5() {
+export default function Initmod1_2() {
     const [ IsPasswordShown, setIsPasswordShown] = React.useState(false);
   return (
     <SafeAreaView 
@@ -33,14 +30,14 @@ export default function Initmdps5() {
             }}>
             <Text 
                 style = {{
-                    color: "#0D45A1",
+                    color: "#0d49ae",
                     fontSize: 15,
                     fontWeight: "bold",
                     marginLeft: 30,
                     marginTop: 10,
-                    marginBottom: 30,
+                    marginBottom: 50,
                 }}>
-                {"Écrivez le code s'il vous plaît :"}
+                {"Veuillez entrer votre adress e-mail pour rechercher à votre compte:"}
             </Text>
             <View 
                 style = {{
@@ -48,18 +45,16 @@ export default function Initmdps5() {
                     borderRadius: 10,
                     paddingVertical: 14,
                     paddingHorizontal: 27,
-                    marginBottom: 20,
+                    marginBottom: 50,
                     marginHorizontal: 33,
                     marginTop: 50,
-                    opacity: 0.5,
+                    opacity: 0.7,
                 }}>
                 <TextInput
-                    placeholder='Entrez le code à 6 chiffres'
-                    maxLength={6}
-                    keyboardType="numeric"
+                    placeholder='exemple1@gmail.com'
                     style = {{
                         color: "#000000",
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: "bold",
                     }}>
                 </TextInput>
@@ -71,9 +66,9 @@ export default function Initmdps5() {
                     borderRadius: 40,
                     paddingVertical: 10,
                     marginBottom: 31,
-                    marginTop: 20,
+                    marginTop: 40,
                     marginHorizontal: 100,
-                    opacity: 0.85,
+                    opacity: 0.8,
                     
                 }}>
                     <Text 
