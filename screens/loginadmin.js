@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 
 
-export default function Loginadmin() {
+export default function Loginadmin({navigation}) {
     const [ IsPasswordShown, setIsPasswordShown] = React.useState(false);
   return (
     <SafeAreaView 
@@ -106,7 +106,7 @@ export default function Loginadmin() {
                 
             </View>
             <View>
-                <TouchableOpacity  style = {{
+                <TouchableOpacity onPress={() => navigation.navigate('DrawerH')} style = {{
                     alignItems: "center",
                     backgroundColor: "#2578F5",
                     borderRadius: 60,
