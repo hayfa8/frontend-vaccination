@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, View, SafeAreaView, Image, Text, TouchableOpacity, TextInput } from 'react-native';
 import 'react-native-gesture-handler';
+import { NavigationContainer, } from '@react-navigation/native';
 import { DrawerItemList, createDrawerNavigator } from '@react-navigation/drawer';
 import Accueil from './accueiladmin';
 import ComptesMédecins from './comptesmédecins';

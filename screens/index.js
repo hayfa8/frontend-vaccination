@@ -9,16 +9,17 @@ import ComptesMédecins from "./comptesmédecins";
 import ComptesParents from "./comptesparents";
 import DrawerH from "./drawerhope";
 import Loginadmin from "./loginadmin";
-import Initmdps1 from "./initmod1";
-import Initmdps2 from "./initmod2";
-import Initmdps3 from "./initmod3";
-import Initmdps4 from "./initmod4";
-import Initmdps5 from "./initmod5";
 import Ajoutvaccins from "./ajoutervaccin";
 import Listevaccins from "./listevaccins";
 import Déconnexion from "./déconnexion";
 import Consultervacc from "./consultervacc";
-import Route from "./rootStack";
+import Route from "./rootstackadmin";
+import Accueilparent from "./accueilparent";
+import Ajouterrend from "./ajouterrend";
+import Drawerparent from "./drawerparent";
+import Notificationpar from "./notificationparent";
+import Listerend from "./listerend";
+import TabNavigator from "./tabparent";
 
 
 
@@ -36,14 +37,17 @@ export {
     ComptesParents,
     DrawerH,
     Loginadmin,
-    Initmdps1,
-    Initmdps2,
-    Initmdps3,
-    Initmdps4,
-    Initmdps5,
     Listevaccins,
     Ajoutvaccins,
     Déconnexion,
     Consultervacc,
-    Route
+    Route,
+    Drawerparent,
+    Accueilparent,
+    Notificationpar,
+    Ajouterrend,
+    Listerend,
+    TabNavigator
+
+
 };

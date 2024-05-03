@@ -23,7 +23,7 @@ export default function Ajoutvaccins() {
                 flex: 1,
             }}>
             <View style={styles.header}>
-                <Image style={styles.home} source={require('../assets/vaccinn.png')} />
+                <Image style={styles.home} source={require('../assets/vaccin.png')} />
                 <Text style={styles.headerText}>Ajouter vaccin</Text>
             </View>
             <View 
@@ -33,8 +33,7 @@ export default function Ajoutvaccins() {
                     paddingBottom: 50,
                     top:-10,
                     height:960,
-                    marginHorizontal:150 ,
-                    borderRadius:10    
+                    marginHorizontal:150     
                 }}>
                 <View 
                     style = {{
@@ -70,7 +69,7 @@ export default function Ajoutvaccins() {
                         marginHorizontal: 32,
                     }}>
                     <TextInput
-                        placeholder='  Date de creation de vaccin : j/m/a' 
+                        placeholder='  Date de creation de vaccin' 
                         style = {{
                             color: "black",
                             fontSize: 15,
@@ -325,8 +324,7 @@ export default function Ajoutvaccins() {
                     backgroundColor: "#2578F5",
                     borderRadius: 10,
                     paddingVertical: 10,
-                    marginHorizontal: 325,
-                    marginTop:30
+                    marginHorizontal: 300,
                     
                 }}
                 onPress={handleAjouterPress}

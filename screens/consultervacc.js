@@ -12,7 +12,6 @@ export default function Consultervacc() {
         >
         <ScrollView  style={{backgroundColor:"#D7DBDF"}}>
          <View style={styles.header}>
-            <Image style={styles.home} source={require('../assets/eye.png')} />
             <Text style={styles.headerText}>Consulter vaccin</Text>
         </View>
         <View

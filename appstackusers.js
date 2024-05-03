@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+//import * as React from 'react';
+import { StyleSheet,} from 'react-native';
 import Splash from './screens/splash';
 import { NavigationContainer } from '@react-navigation/native'; 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -8,7 +8,7 @@ import { Login, Welcome,Inscription1,Inscription2,Inscription3} from './screens'
 
 
 const Stack = createNativeStackNavigator() ;
-export default function App() {
+export default function Appstack() {
   return <NavigationContainer>
   <Stack.Navigator screenOptions={{ 
     headerStyled: {
@@ -47,7 +47,7 @@ export default function App() {
     component={Inscription3}
     options={{HeaderShown:false}}/>
   </Stack.Navigator>
-</NavigationContainer>
+//</NavigationContainer>
 }
 const styles = StyleSheet.create({
   

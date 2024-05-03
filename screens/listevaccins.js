@@ -40,7 +40,7 @@ export default function Listevaccins({navigation}) {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={styles.header}>
-          <Image style={styles.home} source={require('../assets/vaccinn.png')} />
+          <Image style={styles.home} source={require('../assets/vaccin.png')} />
           <Text style={styles.headerText}>Liste des vaccins</Text>
         </View>
         <View style={styles.table}>
