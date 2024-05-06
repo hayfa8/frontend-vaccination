@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, ScrollView, Text, View, TouchableOpacity,TextInput, Button, Image } from 'react-native';
+import { StyleSheet, ScrollView, Text, View, TouchableOpacity, TextInput, Button, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'react-native';
 import { EvilIcons } from '@expo/vector-icons/EvilIcons';
@@ -42,7 +42,7 @@ export default function Notification_parent() {
                         }}>
                         {"Notification"}
                     </Text>
-                    <Text style={{marginLeft: 350,opacity:0.5,marginTop:10,}}>3h</Text>
+                    <Text style={{ marginLeft: 350, opacity: 0.5, marginTop: 10, }}>3h</Text>
                     <View
                         style={{
                             borderWidth: 1,
@@ -56,13 +56,13 @@ export default function Notification_parent() {
                         <View>
                             <View>
                                 <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginTop: 5, opacity: 1, }}>
-                                     Votre date de rendez-vous 2024/10/09 pour Asil Heni et <Text style={styles.boldText}>VALIDER</Text>
+                                    Votre date de rendez-vous 2024/10/09 pour Asil Heni et <Text style={styles.boldText}>VALIDER</Text>
                                 </Text>
                             </View>
                         </View>
                     </View>
-                    
-                    <Text style={{marginLeft: 350,opacity:0.5,marginTop:10,}}>4j</Text>
+
+                    <Text style={{ marginLeft: 350, opacity: 0.5, marginTop: 10, }}>4j</Text>
                     <View
                         style={{
                             borderWidth: 1,
@@ -75,10 +75,10 @@ export default function Notification_parent() {
                         }}>
                         <View>
                             <View>
-                                <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginTop: -15, opacity: 1, }}>
-                                    Votre date de rendez-vous 2024/10/20 pour Asil Heni et <Text style={styles.boldText}>Annuler</Text>{"\n"}{"\n"}<Text style={styles.boldText}>Note:</Text> Notre calandrier et complet. 
-voici votre proposition des nouveau  dates: 2024/11/03 - 2024/11/06
-  
+                                <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginTop: -15, opacity: 1, }}>{"\n"}
+                                    Votre date de rendez-vous 2024/10/20 pour Asil Heni et <Text style={styles.boldText}>Annuler</Text>{"\n"}{"\n"}<Text style={styles.boldText}>Note:</Text> Notre calandrier et complet.
+                                    voici votre proposition des nouveau  dates: 2024/11/03 - 2024/11/06
+
                                 </Text>
                             </View>
                         </View>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     },
     boldText: {
         fontWeight: 'bold',
-        
+
     },
 
 });

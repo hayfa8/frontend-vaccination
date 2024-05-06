@@ -1,14 +1,9 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView, Text, View, TouchableOpacity, Button, Image } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'react-native';
-import { EvilIcons } from '@expo/vector-icons/EvilIcons';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Ionicons } from '@expo/vector-icons';
 
 export default function Listes_dossier() {
-    const [IsPasswordShown, setIsPasswordShown] = React.useState(true);
-    const onPress = () => { navigation.goBack(); };
     return (
         <SafeAreaView
             style={{
@@ -20,8 +15,6 @@ export default function Listes_dossier() {
                 style={{
                     flex: 1,
                     backgroundColor: "#F2F2F2",
-                    
-
                 }}>
                 <View
                     style={{
@@ -31,6 +24,7 @@ export default function Listes_dossier() {
 
 
                     }}>
+                        
                     <Text
                         style={{
                             color: "#000000",
@@ -42,9 +36,22 @@ export default function Listes_dossier() {
                         }}>
                         {"Listes des dossiers"}
                     </Text>
+                    <View style={{
+                        padding:20,
+                        backgroundColor: "#e5e7e6",
+                        alignItems: "center",
+                        borderRadius: 10,
+                        marginTop:-5,
+                        marginBottom:-10,
+                        marginLeft: 30,
+                        marginRight: 250,
+                    }}><Text style={{right:20,}}>Recherche</Text>
+                        <Image source={require('../assets/chercher.png')} style={{  width: 20, height: 20, left:40, marginTop:-20, }} />
+                    </View>
                     <TouchableOpacity>
                     <Image source={require('../assets/calendar-icon.png.png')} style={{  width: 40, height: 40, left:320,marginBottom:10 }} />
                     </TouchableOpacity>
+                    
                     <View
                         style={{
                             borderWidth: 1,
@@ -59,7 +66,7 @@ export default function Listes_dossier() {
                         <View>
                             <View style={styles.buttonContainer}>
                                 <TouchableOpacity style={styles.button1}>
-                                    <Text style={styles.buttonText}>Voir Dossier</Text>
+                                    <Text style={styles.buttonText}>Suivi Enfant</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.button1}>
                                     <Text style={styles.buttonText}>Modifier Dossier</Text>
@@ -89,7 +96,7 @@ export default function Listes_dossier() {
                         <View>
                             <View style={styles.buttonContainer}>
                                 <TouchableOpacity style={styles.button}>
-                                    <Text style={styles.buttonText}>Voir Dossier</Text>
+                                    <Text style={styles.buttonText}>Suivi Enfant</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.button}>
                                     <Text style={styles.buttonText}>Modifier Dossier</Text>
@@ -119,7 +126,7 @@ export default function Listes_dossier() {
                         <View>
                             <View style={styles.buttonContainer}>
                                 <TouchableOpacity style={styles.button}>
-                                    <Text style={styles.buttonText}>Voir Dossier</Text>
+                                    <Text style={styles.buttonText}>Suivi Enfant</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.button}>
                                     <Text style={styles.buttonText}>Modifier Dossier</Text>

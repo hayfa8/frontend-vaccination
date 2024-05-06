@@ -2,9 +2,6 @@ import * as React from 'react';
 import { StyleSheet, ScrollView, Text, View, TextInput, TouchableOpacity, Button, Image, ImageBackground } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { EvilIcons } from '@expo/vector-icons/EvilIcons';
-import { FontAwesome } from '@expo/vector-icons/FontAwesome';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 

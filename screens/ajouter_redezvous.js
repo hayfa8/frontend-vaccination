@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, RadioForm, Image, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Image, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { useState } from 'react';
 import { Picker } from '@react-native-picker/picker';
-import { Ionicons } from '@expo/vector-icons';
+
 
 
 export default function Ajouter_redezvous() {
-    const [selectedOption, setSelectedOption] = useState(null);
+    
     const [selectedValue, setSelectedValue] = useState('');
-    const handleSelectOption = (option) => {
-        setSelectedOption(option);
-    };
+    const [selectedValue1, setSelectedValue1] = useState('');
+    
+    
 
     return (
         <SafeAreaView
@@ -66,14 +66,14 @@ export default function Ajouter_redezvous() {
                         }}>
                         <Picker
                             selectedValue={selectedValue}
-                            style={{ height: 0, width: 320,marginTop:-10,marginBottom:10, }}
+                            style={{ height: 0, width: 320,marginTop:-15,marginBottom:15, }}
                             onValueChange={(itemValue, itemIndex) =>
                                 setSelectedValue(itemValue)
                             }
                         >
-                            <Picker.Item label="--"  />
-                            <Picker.Item label="Asil Heni"  />
-                            <Picker.Item label="Adel Heni"  />
+                            <Picker.Item label="--" value="--"  />
+                            <Picker.Item label="Asil Heni" value="Asil Heni" />
+                            <Picker.Item label="Adel Heni" value= "Adel Heni" />
                             
                         </Picker>
                         <TextInput
@@ -89,15 +89,15 @@ export default function Ajouter_redezvous() {
                     <Text style={styles.foufa}>Choisir le médecin</Text>
                     <View style={styles.container}>
                     <Picker
-                            selectedValue={selectedValue}
-                            style={{ height: 0, width: 320,marginTop:-30,marginBottom:10, }}
+                            selectedValue={selectedValue1}
+                            style={{ height: 0, width: 320,marginTop:-15,marginBottom:-20, }}
                             onValueChange={(itemValue, itemIndex) =>
-                                setSelectedValue(itemValue)
+                                setSelectedValue1(itemValue)
                             }
                         >
-                            <Picker.Item label="--"  />
-                            <Picker.Item label="Asil Heni"  />
-                            <Picker.Item label="Adel Heni"  />
+                            <Picker.Item label="--" value="--" />
+                            <Picker.Item label="Dr Wafa"value= "Dr Wafa" />
+                            <Picker.Item label="Dr Amin" value="Dr Amin" />
                             
                         </Picker>
                         <TextInput
@@ -186,20 +186,7 @@ export default function Ajouter_redezvous() {
                         marginLeft:100,
                         marginBottom:300,
                         fontWeight: "bold"
-                    }}>
-                        <Text>Sélectionnez une option :</Text>
-                        <Picker
-                            selectedValue={selectedValue}
-                            style={{ height: 50, width: 200, }}
-                            onValueChange={(itemValue, itemIndex) =>
-                                setSelectedValue(itemValue)
-                            }
-                        >
-                            <Picker.Item label="Asil Heni"  />
-                            <Picker.Item label="Adel Heni"  />
-                            {/* Ajoutez d'autres options selon vos besoins */}
-                        </Picker>
-                        
+                    }}> 
                     </View>
                 </View>
             </ScrollView>
