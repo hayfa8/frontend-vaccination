@@ -1,21 +1,18 @@
 import * as React from 'react';
-import { StyleSheet, ScrollView, Text, View, TouchableOpacity,TextInput, Button, Image } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { StatusBar } from 'react-native';
-import { EvilIcons } from '@expo/vector-icons/EvilIcons';
+import { StyleSheet, ScrollView, Text, View, TouchableOpacity,Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Ionicons } from '@expo/vector-icons';
+import Header from './header';
 
-export default function Listes_rdv_parent() {
-    const [IsPasswordShown, setIsPasswordShown] = React.useState(true);
-    const onPress = () => { navigation.goBack(); };
+
+export default function Listes_rdv_parent({navigation}) {
+    
     return (
         <SafeAreaView
             style={{
                 flex: 1,
 
             }}>
-            <StatusBar backgroundColor="white" barStyle="dark-content" />
+            <Header navigation={navigation}/>
             <ScrollView
                 style={{
                     flex: 1,
@@ -26,8 +23,7 @@ export default function Listes_rdv_parent() {
                 <View
                     style={{
                         backgroundColor: "#F2F2F2",
-                        paddingTop: 60,
-                        paddingBottom: 500,
+                       
 
 
                     }}>
@@ -37,12 +33,13 @@ export default function Listes_rdv_parent() {
                             fontSize: 20,
                             fontWeight: "bold",
                             marginLeft: 30,
-                            marginBottom: 30,
+                            marginBottom: 65,
+                            marginTop:10,
                             textDecorationLine: 'underline',
                         }}>
                         {"Liste des rendez-vous"}
                     </Text>
-                    <Text style={{marginLeft: 320,opacity:0.5,marginTop:10,}}>Dr Wafa</Text>
+                   
                     <View
                         style={{
                             borderWidth: 1,
@@ -52,16 +49,14 @@ export default function Listes_rdv_parent() {
                             borderColor: 'transparent',
                             marginLeft: 30,
                             marginRight: 30,
+                            
                         }}>
-                        <View>
-                            <View>
+                               
                                 <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginTop: 5, opacity: 1, }}>
-                                     Votre date de rendez-vous 2024/10/09 pour Asil Heni et <Text style={styles.boldText}>VALIDER</Text>
+                                     Votre date de rendez-vous              pour              et <Text style={styles.boldText}>VALIDER</Text>
                                 </Text>
-                            </View>
-                        </View>
                     </View>
-                    <Text style={{marginLeft: 40,opacity:0.5,marginTop:10,}}>Moi</Text>
+                   
                     <View
                         style={{
                             borderWidth: 1,
@@ -71,22 +66,27 @@ export default function Listes_rdv_parent() {
                             borderColor: 'transparent',
                             marginLeft: 30,
                             marginRight: 30,
+                            marginTop:20,
+                            marginBottom:20,
+                         
                         }}>
                         <View>
-                            
                             <View style={styles.Container1}>
-                            <Image source={require('../assets/bouton-modifier.png')} style={{ right: -280, width: 20,marginTop: -60, height: 20,  }} />
-                                <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginLeft: 30, marginTop: -20, opacity: 1, }}>
-                                    {'  '}<Text style={styles.boldText}>Nom:</Text>  Asil Heni {"\n"}  {''}
-                                    <Text style={styles.boldText}>Létat de l’enfant:</Text> Urgent (fiévre) {"\n"}{'  '}
-                                    <Text style={styles.boldText}>Date de rendez-vous:</Text> 2024/10/09
+                            <TouchableOpacity  onPress={()=>navigation.navigate("Modif_rendezvous")}>
+                            <Image source={require('../assets/bouton-modifier.png')} style={{ right: -265, width: 20,bottom:45,height: 20,  }} />
+                            </TouchableOpacity>
+                                <View style={{ color: "#000000", alignItems: "center", marginLeft: 30, marginTop: -20, opacity: 1, }}>
+                                    <Text  style={[styles.boldText,{right:63,fontSize: 13}]}>Nom:</Text>
+                                    <Text  style={[styles.boldText,{right:53,fontSize: 13}]}>Prénom:</Text>
+                                    <Text  style={[styles.boldText,{right:25,fontSize: 13}]}>Létat de l’enfant:</Text>
+                                    <Text  style={[styles.boldText,{right:10,fontSize: 13}]}>Date de rendez-vous:</Text>
                                     
-                                </Text>
-                                <Image source={require('../assets/enfant (1).png')} style={{ right: 280, marginTop: -30, width: 40, height: 40, borderRadius: 50 }} />
+                                </View>
+                                <Image source={require('../assets/fille.png')} style={{ right: 210,bottom:25, width: 40, height: 40, borderRadius: 50 }} />
                             </View>
                         </View>
                     </View>
-                    <Text style={{marginLeft: 320,opacity:0.5,marginTop:10,}}>Dr Wafa</Text>
+                    
                     <View
                         style={{
                             borderWidth: 1,
@@ -96,17 +96,21 @@ export default function Listes_rdv_parent() {
                             borderColor: 'transparent',
                             marginLeft: 30,
                             marginRight: 30,
+                            height:170,
+                            
                         }}>
-                        <View>
-                            <View>
-                                <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginTop: -15, opacity: 1, }}>
-                                    Votre date de rendez-vous 2024/10/20 pour Asil Heni et <Text style={styles.boldText}>Annuler</Text>{"\n"}{"\n"}<Text style={styles.boldText}>Note:</Text> Notre calandrier et complet. 
-voici votre proposition des nouveau  dates: 2024/11/03 - 2024/11/06
+                               
+                                <View style={{ color: "#000000", fontSize: 13, alignItems: "center", marginBottom: 15, opacity: 1,marginTop:10 }}>
+                                   <Text style={[styles.boldText,{right:100,fontSize: 15,marginBottom:20}]}>Annuler</Text>
+                                   <Text style={[styles.boldText,{right:108,fontSize: 13}]}>Note:</Text>
+                                    
   
-                                </Text>
-                            </View>
-                        </View>
+                                </View>
+                         
                     </View>
+                    <TouchableOpacity onPress={()=>navigation.navigate("Ajouter_redezvous")} >
+                    <Image source={require('../assets/new folder.png')} style={{ width:50,height:50,left:310,marginTop:30}} />
+                    </TouchableOpacity>
                 </View>
             </ScrollView>
         </SafeAreaView>

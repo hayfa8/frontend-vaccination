@@ -20,7 +20,7 @@ export default function Modifier_doss() {
                 style={{
                     flex: 1,
                     borderRadius: 25,
-                    pointerEvents: "none",
+                    
                     
 
                 }}>
@@ -30,7 +30,7 @@ export default function Modifier_doss() {
                         paddingTop: 50,
                         paddingBottom: 500,
                         top: -10,
-                        
+                        height:950
 
                     }}>
                     <Text
@@ -49,8 +49,8 @@ export default function Modifier_doss() {
                         <Image source={require('../assets/calendar-icon.png.png')} style={{ width: 40, height: 40, left: 320, marginBottom: 10 }} />
                     </TouchableOpacity>
                     <View style={{ flexDirection: 'row', alignItems: 'center', }}>
-                        <Image source={require('../assets/garcon.png')} style={{ width: 70, height: 70, marginBottom: 40, left: 110 }} />
-                        <Image source={require('../assets/enfant (1).png')} style={{ width: 70, height: 70, marginBottom: 40, left: 160, right: 10 }} />
+                        <Image source={require('../assets/boy.png')} style={{ width: 70, height: 70, marginBottom: 40, left: 110,borderRadius:50 }} />
+                        <Image source={require('../assets/fille.png')} style={{ width: 70, height: 70, marginBottom: 40, left: 160, right: 10 ,borderRadius:50 }} />
                     </View>
                     <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
@@ -75,7 +75,7 @@ export default function Modifier_doss() {
                             </TouchableOpacity>
                         ))}
                     </View>
-
+                    <Text style={{ color: "black", fontSize: 16, fontWeight: "bold", marginLeft:35,bottom:10,marginTop:10}}>Nom et Prénom</Text>
                     <View
                         style={{
                             backgroundColor: "#ffffff",
@@ -97,9 +97,10 @@ export default function Modifier_doss() {
                                 
                                 
                             }}>
-                                <Text>Asil Heni</Text>
+                            
                         </TextInput>
                     </View>
+                    <Text style={{ color: "black", fontSize: 16, fontWeight: "bold", marginLeft:35,bottom:10,}}>Date de naissance</Text>
                     <View style={styles.container}>
                         <TextInput
                             style={{
@@ -107,9 +108,10 @@ export default function Modifier_doss() {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}>
-                                <Text>2024/06/26</Text>
+                               
                         </TextInput>
                     </View>
+                    <Text style={{ color: "black", fontSize: 16, fontWeight: "bold", marginLeft:35,bottom:10,}}>Poid</Text>
                     <View
                         style={{
                             backgroundColor: "#ffffff",
@@ -128,9 +130,10 @@ export default function Modifier_doss() {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}>
-                                <Text>10 Kg</Text>
+                               
                         </TextInput>
                     </View>
+                    <Text style={{ color: "black", fontSize: 16, fontWeight: "bold", marginLeft:35,bottom:10,}}>Taille</Text>
                     <View
                         style={{
                             backgroundColor: "#ffffff",
@@ -149,9 +152,10 @@ export default function Modifier_doss() {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}>
-                                <Text>75 Cm</Text>
+                               
                         </TextInput>
                     </View>
+                    <Text style={{ color: "black", fontSize: 16, fontWeight: "bold", marginLeft:35,bottom:10,}}>Parent</Text>
                     <View
                         style={{
                             backgroundColor: "#ffffff",
@@ -171,7 +175,7 @@ export default function Modifier_doss() {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}>
-                                <Text>2216376</Text>
+                               
                         </TextInput>
                     </View>
                     <TouchableOpacity>
@@ -195,11 +199,16 @@ export default function Modifier_doss() {
                                 }}>
                                 {"enregistrer"}
                             </Text>
+                            
                         </View>
+                       
                     </TouchableOpacity>
                 </View>
+               
             </ScrollView>
+            
         </SafeAreaView>
+        
 
     );
 };

@@ -1,41 +1,35 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView, Text, View,TextInput , TouchableOpacity,Button,Image,ImageBackground} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { StatusBar } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { EvilIcons } from '@expo/vector-icons/EvilIcons';
-import { FontAwesome } from '@expo/vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Headermed from './headermed';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
-export default function Accueilmed() {
-    const [ IsPasswordShown, setIsPasswordShown] = React.useState(true);
-    const onPress = () => {navigation.goBack();};
+export default function Accueilmed({navigation}) {
   return (
     <SafeAreaView 
     style = {{
         flex: 1,
         
     }}>
-        <StatusBar  backgroundColor="white" barStyle="dark-content" />
-    <ScrollView  
-        style = {{
+         <Headermed navigation={navigation} />
+         <ScrollView
+            style={{
             flex: 1,
-            backgroundColor: "##FEEEFF",
-            pointerEvents: "none",
-            
+            backgroundColor: "#F2F2F2",
+            bottom:20
         }}>
-        <View style ={{
-                        
-                        marginTop: 50,
-                    }}>
-                        <Text 
+            <View style={{
+                 marginTop: 20,
+        }}>
+            <Text 
                 style = {{
                     color: "#000000",
                     fontSize: 20,
                     fontWeight: "bold",
                     marginLeft: 30,
-                    marginBottom: 30,
+                    marginBottom: 50,
                     textDecorationLine: 'underline',
                 }}>
                 {"Accueil"}
@@ -52,15 +46,16 @@ export default function Accueilmed() {
                         </ImageBackground>
                         <ImageBackground source={require('../assets/Bokeeh.png')} style={styles.rectangle}>
                         <View>
-                            <Text style={styles.text1}>Notre rendez-vous pour aujoured’hui</Text>
-                            <Image/>
-                            <Text style={styles.text}>1-</Text>
+                            <Text style={styles.text1}>Les rendez-vous pour aujourd’hui</Text>
+                            <FontAwesome name="calendar" size={24} color="white" style={styles.image} />
+                            <Text style={{marginLeft:9,bottom:10,color:"white", fontSize:15}}>0 Rendez-vous</Text>
                         </View>
                         </ImageBackground>
                         <ImageBackground source={require('../assets/Bokeeh.png')} style={styles.rectangle}>
                         <View>
-                            <Text style={styles.text1}>Notre vaccins pour aujoured’hui</Text>
-                            <Text style={styles.text}>1-</Text>
+                            <Text style={styles.text1}>Les vaccins pour aujourd’hui</Text>
+                            <MaterialCommunityIcons name="needle" size={24} color="white" style={styles.image} />
+                            <Text style={{marginLeft:9,bottom:10,color:"white", fontSize:15}}>0 Vaccin(s)</Text>
                         </View>
                         </ImageBackground>
                     </View>
@@ -82,10 +77,9 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingHorizontal: 20,
     flexDirection: "column",
-    
     flex: 1,
-    marginHorizontal: 30,
-    width:350,
+    marginHorizontal: 50,
+    width:250,
     height:150,
     marginBottom: 20,
 },
@@ -101,7 +95,7 @@ text1:{
     fontSize:15,
     marginBottom:10,
     fontWeight: "bold",
-    left:11,
+   
 },
 image: {
     width: 30,

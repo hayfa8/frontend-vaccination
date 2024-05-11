@@ -1,13 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet,} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome ,MaterialIcons} from '@expo/vector-icons';
 import Accueilparent from './accueilparent';
-import Notificationpar from './notificationparent';
-import Ajouterrend from './ajouterrend';
-import Listerend from './listerend';
-import Suivivacc from './suivivacc';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Listes_rdv_parent from './listes_rdv_parent';
+import Déconnexion from './déconnexion';
+import Suivienfants from './suivienfants';
 
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
@@ -35,19 +33,9 @@ const TabNavigator = () => {
           ),
           }}
       />
-      <Tab.Screen
-        name="Ajouter"
-        component={Ajouterrend}
-        options={{
-          title: "",
-          tabBarIcon: ({ focused }) => (
-            <FontAwesome name="plus" size={25}  color={focused ? "#2578F5" : "black"}  />
-          ),
-          }}
-      />
       <Tab.Screen 
-        name="Notification" 
-        component={Notificationpar}
+        name="Suivienfants" 
+        component={Suivienfants}
         options={{
           title:"",
           tabBarIcon:() => {
@@ -64,15 +52,15 @@ const TabNavigator = () => {
                 borderColor:"#ffffff",
 
             }}>
-                <FontAwesome name="bell" size={22} color={"white"} />
+               <MaterialIcons name="folder" size={22} color={"white"} />
             </View>
           )
         } 
     }}
       />
       <Tab.Screen
-        name="Liste"
-        component={Listerend}
+        name="Listes_rdv_parent"
+        component={Listes_rdv_parent}
         options={{
           title: "",
           tabBarIcon: ({ focused }) => (
@@ -81,12 +69,12 @@ const TabNavigator = () => {
           }}
       />
       <Tab.Screen
-        name="Suivie"
-        component={Suivivacc}
+        name="Déconnexion"
+        component={Déconnexion}
         options={{
           title: "",
           tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons name="medical-bag" size={24}color={focused ? "#2578F5" : "black"} style={{}} />
+            <FontAwesome name="sign-out" size={24}color={focused ? "#2578F5" : "black"} style={{}} />
           ),
           }}
       />

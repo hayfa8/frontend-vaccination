@@ -5,17 +5,17 @@ import { StatusBar } from 'react-native';
 import { EvilIcons } from '@expo/vector-icons/EvilIcons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import Headermed from './headermed';
 
-export default function Consult_rendezvous() {
-    const [IsPasswordShown, setIsPasswordShown] = React.useState(true);
-    const onPress = () => { navigation.goBack(); };
+export default function Consult_rendezvous({navigation}) {
+   
     return (
         <SafeAreaView
             style={{
                 flex: 1,
 
             }}>
-            <StatusBar backgroundColor="white" barStyle="dark-content" />
+            <Headermed navigation={navigation} />
             <ScrollView
                 style={{
                     flex: 1,
@@ -26,11 +26,7 @@ export default function Consult_rendezvous() {
                 <View
                     style={{
                         backgroundColor: "#F2F2F2",
-                        paddingTop: 60,
-                        paddingBottom: 500,
-
-
-                    }}>
+                       }}>
                     <Text
                         style={{
                             color: "#000000",
@@ -49,7 +45,7 @@ export default function Consult_rendezvous() {
                         style={{
                             borderWidth: 1,
                             backgroundColor: "#FEE0FF",
-                            padding: 45,
+                            padding: 50,
                             borderRadius: 10,
                             borderColor: 'transparent',
                             marginLeft: 30,
@@ -59,15 +55,18 @@ export default function Consult_rendezvous() {
                         }}>
                         <View>
                             <View style={styles.buttonContainer}>
-                                <TouchableOpacity style={styles.button}>
-                                    <Text style={styles.buttonText}>Valider</Text>
+                                <TouchableOpacity style={[styles.button,{right:60,top:5}]}>
+                                <Text style={styles.buttonText}>Valider</Text>
                                 </TouchableOpacity>
-                                <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginLeft: -120, marginTop: -40, opacity: 1, }}>
-                                    {'  '}<Text style={styles.boldText}>Nom:</Text>  Asil Heni {"\n"}  {''}
-                                    <Text style={styles.boldText}>Létat de l’enfant:</Text> Urgent (fiévre) {"\n"}{'  '}
-                                    <Text style={styles.boldText}>Date de rendez-vous:</Text> 2024/10/09
-                                </Text>
-                                <Image source={require('../assets/enfant (1).png')} style={{ right: 280, marginTop: -50, width: 40, height: 40, borderRadius: 50 }} />
+                                <TouchableOpacity style={[styles.button3,{right:50,top:5}]}>
+                                    <Text style={styles.buttonText}>Annuler</Text>
+                                </TouchableOpacity>
+                                <View style={{ color: "#000000", alignItems: "center", marginLeft: -235, marginTop: -40, opacity: 1, }}>
+                                    <Text style={[styles.boldText,{right:6,fontSize: 13}]}>Nom:</Text>
+                                    <Text style={[styles.boldText,{right:24,fontSize: 13}]}>L'état de l’enfant:</Text>
+                                    <Text style={[styles.boldText,{right:10,fontSize: 13}]}>Date de rendez-vous:</Text>
+                                </View>
+                                <Image source={require('../assets/fille.png')} style={{ right: 210, marginTop: -50, width: 40, height: 40, borderRadius: 50 }} />
                             </View>
                             <View style={{ backgroundColor: "#F4BCE1", borderColor: 'black',  borderRadius: 30, marginLeft: -10, marginRight: -20, marginTop: 10 }}>
                                 <Text
@@ -76,104 +75,18 @@ export default function Consult_rendezvous() {
                                 </Text>
                                 <Image source={require('../assets/ligne.png')} style={{marginLeft:220,width: 30, height: 30,  }} />
                                 <TouchableOpacity>
-                                <Image source={require('../assets/envoyer.png')} style={{marginLeft:250,width: 20, height: 20,marginTop:-25 }} />
+                                <Image source={require('../assets/envoyer.png')} style={{marginLeft:237,width: 20, height: 20,marginTop:-25 }} />
                                 </TouchableOpacity>
                                 <TextInput placeholder=''
                                 style={{color: "#000000",fontSize: 12,marginLeft:25, marginTop:-15}}
                                 multiline={true}>
-                                    <Text>.C’est un effet latéral du vaccin</Text>
                                 </TextInput>
                                 
                             </View>
                         </View>
                     </View>
-                    <View
-                        style={{
-                            borderWidth: 1,
-                            backgroundColor: "#CFE8FF",
-                            padding: 45,
-                            borderRadius: 10,
-                            borderColor: 'transparent',
-                            marginLeft: 30,
-                            marginRight: 30,
-                            marginTop:10,
 
-                        }}>
-                        <View>
-                            <View style={styles.buttonContainer}>
-                            <TouchableOpacity style={styles.button2}>
-                                    <Text style={styles.buttonText}>Valider</Text>
-                                </TouchableOpacity>
-                                <TouchableOpacity style={styles.button3}>
-                                    <Text style={styles.buttonText}>Annuler</Text>
-                                </TouchableOpacity>
-                                
-                                <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginLeft: -165, marginTop: -40, opacity: 1, }}>
-                                    {'  '}<Text style={styles.boldText}>Nom:</Text>  Azer Mbarek {"\n"}  {''}
-                                    <Text style={styles.boldText}>Létat de l’enfant:</Text> stable {"\n"}{'  '}
-                                    <Text style={styles.boldText}>Date de rendez-vous:</Text>2024/10/23
-                                </Text>
-                                <Image source={require('../assets/garcon.png')} style={{ right: 280, marginTop: -50, width: 40, height: 40, borderRadius: 50 }} />
-                            </View>
-                            <View style={{ backgroundColor: "#B6DDF9", borderColor: 'black',  borderRadius: 30, marginLeft: -10, marginRight: -20, marginTop: 10 }}>
-                                <Text
-                                    style={{ color: "#000000", fontSize: 11, marginTop: 5,marginLeft:20, marginBottom: -1,textDecorationLine: 'underline',fontWeight: "bold", opacity: 0.6 , }}>
-                                    {"Note"}
-                                </Text>
-                                <Image source={require('../assets/ligne.png')} style={{marginLeft:220,width: 30, height: 30,  }} />
-                                <TouchableOpacity>
-                                <Image source={require('../assets/envoyer.png')} style={{marginLeft:250,width: 20, height: 20,marginTop:-25 }} />
-                                </TouchableOpacity>
-                                <TextInput placeholder=''
-                                style={{color: "#000000",fontSize: 10,marginLeft:25, marginTop:-15}}>
-                                </TextInput>
-                            </View>
-                        </View>
-                    </View>
-                    <View
-                        style={{
-                            borderWidth: 1,
-                            backgroundColor: "#FEE0FF",
-                            padding: 45,
-                            borderRadius: 10,
-                            borderColor: 'transparent',
-                            marginLeft: 30,
-                            marginRight: 30,
-                            marginTop:10,
-
-                        }}>
-                        <View>
-                            <View style={styles.buttonContainer}>
-                                <TouchableOpacity style={styles.button1}>
-                                    <Text style={styles.buttonText}>Annuler</Text>
-                                </TouchableOpacity>
-                                <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginLeft: -120, marginTop: -40, opacity: 1, }}>
-                                    {'  '}<Text style={styles.boldText}>Nom:</Text>  Lina Zakri {"\n"}  {''}
-                                    <Text style={styles.boldText}>Létat de l’enfant:</Text> stable  {"\n"}{'  '}
-                                    <Text style={styles.boldText}>Date de rendez-vous:</Text>2024/10/28
-                                </Text>
-                                <Image source={require('../assets/enfant (1).png')} style={{ right: 280, marginTop: -50, width: 40, height: 40, borderRadius: 50 }} />
-                            </View>
-                            <View style={{ backgroundColor: "#F4BCE1", borderColor: 'black',  borderRadius: 30, marginLeft: -10, marginRight: -20, marginTop: 10 }}>
-                                <Text
-                                    style={{ color: "#000000", fontSize: 11, marginTop: 5,marginLeft:20, marginBottom: -1,textDecorationLine: 'underline',fontWeight: "bold", opacity: 0.6 , }}>
-                                    {"Note"}
-                                </Text>
-                                <Image source={require('../assets/ligne.png')} style={{marginLeft:220,width: 30, height: 30,  }} />
-                                <TouchableOpacity>
-                                <Image source={require('../assets/envoyer.png')} style={{marginLeft:250,width: 20, height: 20,marginTop:-25 }} />
-                                </TouchableOpacity>
-                                <TextInput placeholder=''
-                                style={{color: "#000000",fontSize: 10,marginLeft:25, marginTop:-15}}
-                                    multiline={true}
-                                    numberOfLines={3}>
-                                    <Text>.Notre calandrier et complet. 
-voici votre nouveau date de rendez-vous: 2024/11/09.</Text>
-                                </TextInput>
-                            </View>
-                        </View>
-                    </View>
-
+                    <View style={{height:150}}/>
 
                 </View>
             </ScrollView>
@@ -205,15 +118,6 @@ const styles = StyleSheet.create({
         marginLeft: 90,
         marginBottom: -200,
     },
-    button1: {
-        backgroundColor: '#F96464',
-        paddingVertical: 8,
-        paddingHorizontal: 20,
-        borderRadius: 20,
-        marginTop: 8,
-        marginLeft: 90,
-        marginBottom: -220,
-    },
     button3: {
         backgroundColor: '#F96464',
         paddingVertical: 8,
@@ -222,14 +126,17 @@ const styles = StyleSheet.create({
         marginTop: 8,
         marginLeft: 10,
         marginBottom: -200,
+        right:10,
+        top:4,
     },
     button2: {
         backgroundColor: '#3EC27F',
         paddingVertical: 8,
         paddingHorizontal: 20,
         borderRadius: 20,
-        marginTop: 8,
+        top:8,
         marginLeft: 50,
+        right:20,
         marginBottom: -200,
     },
     buttonText: {

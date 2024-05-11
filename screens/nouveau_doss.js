@@ -48,8 +48,8 @@ export default function Nouveau_doss() {
                         <Image source={require('../assets/calendar-icon.png.png')} style={{ width: 40, height: 40, left: 320, marginBottom: 10 }} />
                     </TouchableOpacity>
                     <View style={{ flexDirection: 'row', alignItems: 'center', }}>
-                        <Image source={require('../assets/garcon.png')} style={{ width: 70, height: 70, marginBottom: 40, left: 110 }} />
-                        <Image source={require('../assets/enfant (1).png')} style={{ width: 70, height: 70, marginBottom: 40, left: 160, right: 10 }} />
+                        <Image source={require('../assets/boy.png')} style={{ width: 70, height: 70, marginBottom: 40, left: 110 ,borderRadius:30}} />
+                        <Image source={require('../assets/fille.png')} style={{ width: 70, height: 70, marginBottom: 40, left: 160, right: 10,borderRadius:30 }} />
                     </View>
                     <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
@@ -166,6 +166,28 @@ export default function Nouveau_doss() {
                         }}>
                         <TextInput
                             placeholder='Numero dossier médicale'
+                            keyboardType='numeric'
+                            style={{
+                                color: "#000000",
+                                fontSize: 15,
+                                fontWeight: "bold",
+                            }}>
+                        </TextInput>
+                    </View>
+                    <View
+                        style={{
+                            backgroundColor: "#ffffff",
+                            borderColor: "#7776c7",
+                            borderTopLeftRadius: 15,
+                            borderBottomRightRadius: 15,
+                            borderWidth: 1,
+                            paddingVertical: 11,
+                            paddingHorizontal: 7,
+                            marginBottom: 31,
+                            marginHorizontal: 34,
+                        }}>
+                        <TextInput
+                            placeholder='Parent'
                             keyboardType='numeric'
                             style={{
                                 color: "#000000",

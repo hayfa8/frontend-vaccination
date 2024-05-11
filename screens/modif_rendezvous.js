@@ -1,14 +1,12 @@
 import * as React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, RadioForm, Image, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Image, Text, View, TextInput, TouchableOpacity ,StatusBar} from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 import { useState } from 'react';
-import { Ionicons } from '@expo/vector-icons';
 
 
 export default function Modif_rendezvous() {
-    const [selectedOption, setSelectedOption] = useState(null);
-    const handleSelectOption = (option) => {
-        setSelectedOption(option);
-    };
+    const [selectedValue, setSelectedValue] = useState('');
+    const [selectedValue1, setSelectedValue1] = useState('');
 
     return (
         <SafeAreaView
@@ -16,21 +14,19 @@ export default function Modif_rendezvous() {
                 flex: 1,
 
             }}>
+                 <StatusBar backgroundColor="white" barStyle="dark-content" />
             <ScrollView
                 style={{
                     flex: 1,
-                    borderRadius: 25,
-                    pointerEvents: "none",
+                    
 
 
                 }}>
                 <View
                     style={{
-                        backgroundColor: "#FEEEFF",
-                        paddingTop: 50,
+                        backgroundColor: "#F2F2F2",
+                        paddingBottom: 30,
                         
-                        paddingBottom: 500,
-                        top: -10,
 
 
                     }}>
@@ -40,11 +36,11 @@ export default function Modif_rendezvous() {
                             fontSize: 20,
                             fontWeight: "bold",
                             marginLeft: 30,
-                            marginBottom: 110,
-                            marginTop: 20,
+                            marginBottom: 65,
+                            marginTop:60,
                             textDecorationLine: 'underline',
                         }}>
-                        {"Ajouter un rendez-vous"}
+                        {"Modifier un rendez-vous"}
                     </Text>
 
 
@@ -62,32 +58,54 @@ export default function Modif_rendezvous() {
                             marginBottom: 31,
                             marginHorizontal: 32,
                         }}>
-                            
+                        <Picker
+                            selectedValue={selectedValue}
+                            style={{ height: 0, width: 320, marginTop: -15, marginBottom: 15, }}
+                            onValueChange={(itemValue, itemIndex) =>
+                                setSelectedValue(itemValue)
+                            }>
+                            <Picker.Item label="--" value="--" />
+                            <Picker.Item label="Asil Heni" value="Asil Heni" />
+                            <Picker.Item label="Adel Heni" value="Adel Heni" />
+
+                        </Picker>
                         <TextInput
                             style={{
                                 color: "#000000",
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}>
-                                Asil Heni
+
                         </TextInput>
-                        
+
                     </View>
                     <Text style={styles.foufa}>Choisir le médecin</Text>
                     <View style={styles.container}>
+                        <Picker
+                            selectedValue={selectedValue1}
+                            style={{ height: 0, width: 320, marginTop: -15, marginBottom: -20, }}
+                            onValueChange={(itemValue, itemIndex) =>
+                                setSelectedValue1(itemValue)
+                            }
+                        >
+                            <Picker.Item label="--" value="--" />
+                            <Picker.Item label="Dr Wafa" value="Dr Wafa" />
+                            <Picker.Item label="Dr Amin" value="Dr Amin" />
+
+                        </Picker>
                         <TextInput
                             style={{
                                 color: "#000000",
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}>
-                                DR Wafa
-                            </TextInput>
-                        
+
+                        </TextInput>
+
                     </View>
                     <Text style={styles.foufa}>Ajouter la date du rendez-vous</Text>
                     <View
-                    
+
                         style={{
                             backgroundColor: "#ffffff",
                             borderColor: "#7776c7",
@@ -105,11 +123,11 @@ export default function Modif_rendezvous() {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}>
-                                2024/10/09
+                           
                         </TextInput>
                     </View>
                     <Text style={styles.foufa}>L'etat de l'enfant</Text>
-                    
+
                     <View
                         style={{
                             backgroundColor: "#ffffff",
@@ -121,22 +139,22 @@ export default function Modif_rendezvous() {
                             marginBottom: 31,
                             marginHorizontal: 34,
                         }}>
-                            
+
                         <TextInput
                             style={{
                                 color: "#000000",
                                 fontSize: 15,
                                 fontWeight: "bold",
-                                
-                            }}multiline={true}>
-                                Urgent (fiévre)
+
+                            }} multiline={true}>
+                            
                         </TextInput>
-                        <Image source={require('../assets/ligne.png')} style={{marginLeft:240,width: 60, height: 60, marginTop:-25,marginBottom:5 }} />
-                                <TouchableOpacity>
-                                <Image source={require('../assets/envoyer.png')} style={{marginLeft:290,width: 20, height: 20,marginTop:-40 }} />
-                                </TouchableOpacity>
+                        <Image source={require('../assets/ligne.png')} style={{ marginLeft: 240, width: 60, height: 60, marginTop: -25, marginBottom: 5 }} />
+                        <TouchableOpacity>
+                            <Image source={require('../assets/envoyer.png')} style={{ marginLeft: 290, width: 20, height: 20, marginTop: -40 }} />
+                        </TouchableOpacity>
                     </View>
-                    
+
                     <TouchableOpacity>
                         <View
                             style={{

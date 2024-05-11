@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView, SafeAreaView, Text, View, TouchableOpacity, TextInput, Button, Image, StatusBar } from 'react-native';
-import Header from './header';
 
-export default function Consult_doss_parent({navigation}) {
-  
+
+export default function Dossiershistorique() {
     const [data, setData] = useState([
         { age: 'A la naissance', vaccin: 'BCG VHB-0', etat: 'VACCINÉE' },
         { age: 'A 2 mois', vaccin: 'Pentavalent-1+ VPI + VPC-1', etat: 'VACCINÉE' },
@@ -24,32 +23,29 @@ export default function Consult_doss_parent({navigation}) {
         }
         setData(newData);
     }
-    
 
     return (
-        <SafeAreaView style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1, }}>
             <StatusBar backgroundColor="white" barStyle="dark-content" hidden={false} />
             <ScrollView style={{ flex: 1, backgroundColor: "#F2F2F2" }}>
-                <View style={{ backgroundColor: "#F2F2F2", paddingTop: 60, paddingBottom: 500, height: 920 }}>
-                    <Text style={{ color: "#000000", fontSize: 20, fontWeight: "bold", marginLeft: 30, textDecorationLine: 'underline', marginTop: 50, bottom: 50 }}>
-                        {"Dossier médicale"}
-                    </Text>
 
-                    <View style={{borderWidth: 1, backgroundColor: "#FBB8D9", padding: 30, borderRadius: 10, borderColor: 'transparent', marginLeft: 30, marginRight: 30, marginBottom: 20,marginTop:20 }}>
-            <View>
-              <View style={styles.Container}>
-                <View style={{ color: "#000000", alignItems: "center", marginTop: -20, opacity: 1, }}>
-                  <Text style={[styles.boldText,{right:70,fontSize: 13}]}>Nom et Prénom:</Text>
-                  <Text style={[styles.boldText,{right:63,fontSize: 13}]}>Date de naissance:</Text>
-                  <Text style={[styles.boldText,{right:90,fontSize: 13}]}>Poids(Kg):</Text>
-                  <Text style={[styles.boldText,{right:90,fontSize: 13}]}>Taille(cm):</Text>
-                  <Text style={[styles.boldText,{right:28,fontSize: 13}]}>Numéro de dossier médical: </Text>
-                  <Text style={[styles.boldText,{right:100,fontSize: 13}]}>Parent:</Text>
 
-                </View>
-              </View>
-            </View>
-          </View>
+                    <View style={{ borderWidth: 1, backgroundColor: "#FBB8D9", padding: 30, borderRadius: 10, borderColor: 'transparent', marginLeft: 30, marginRight: 30, marginBottom: 20 }}>
+                        <Text style={{ right: 15, opacity: 0.5, bottom: 25 }}>2024/10/09</Text>
+                        <View>
+                            <View style={styles.Container}>
+                                <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginTop: -20, opacity: 1, }}>
+                                    {'  '}<Text style={styles.boldText}>Nom:</Text> Heni{"\n"}{'  '}
+                                    <Text style={styles.boldText}>Prenom:</Text> Asil{"\n"}{'  '}
+                                    <Text style={styles.boldText}>Date de naissance:</Text> 2024/06/26{"\n"}{'  '}
+                                    <Text style={styles.boldText}>Poids(Kg): </Text> 10 Kg{"\n"}{'  '}
+                                    <Text style={styles.boldText}>Taille(cm): </Text> 75 Cm{"\n"}{'  '}
+                                    <Text style={styles.boldText}>Numero dossier médicale: </Text> 2216376
+
+                                </Text>
+                            </View>
+                        </View>
+                    </View>
                     <View style={styles.container1}>
                         <View style={styles.header}>
                             <Text style={styles.headerText}>Age</Text>
@@ -68,13 +64,6 @@ export default function Consult_doss_parent({navigation}) {
                             </View>
                         ))}
                     </View>
-                   
-                </View>
-                <TouchableOpacity onPress={()=>navigation.navigate("Dossiershistorique")} >
-                    <Text style={{ fontSize: 15, fontWeight: "normal", textAlign: "center", bottom:70,right:90}}>
-                    {"Historique"}
-            </Text>
-          </TouchableOpacity>
             </ScrollView>
         </SafeAreaView>
     );

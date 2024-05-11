@@ -6,7 +6,7 @@ import { EvilIcons } from '@expo/vector-icons/EvilIcons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function Notification_parent() {
+export default function Notification_parent({navigation}) {
     const [IsPasswordShown, setIsPasswordShown] = React.useState(true);
     const onPress = () => { navigation.goBack(); };
     return (
@@ -26,9 +26,7 @@ export default function Notification_parent() {
                 <View
                     style={{
                         backgroundColor: "#F2F2F2",
-                        paddingTop: 60,
-                        paddingBottom: 500,
-
+                       
 
                     }}>
                     <Text
@@ -37,12 +35,13 @@ export default function Notification_parent() {
                             fontSize: 20,
                             fontWeight: "bold",
                             marginLeft: 30,
-                            marginBottom: 30,
+                            marginBottom: 65,
+                            marginTop:60,
                             textDecorationLine: 'underline',
                         }}>
                         {"Notification"}
                     </Text>
-                    <Text style={{marginLeft: 350,opacity:0.5,marginTop:10,}}>3h</Text>
+                    
                     <View
                         style={{
                             borderWidth: 1,
@@ -52,17 +51,16 @@ export default function Notification_parent() {
                             borderColor: 'transparent',
                             marginLeft: 30,
                             marginRight: 30,
+                            marginBottom:20
+                            
                         }}>
-                        <View>
-                            <View>
+                               
                                 <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginTop: 5, opacity: 1, }}>
-                                     Votre date de rendez-vous 2024/10/09 pour Asil Heni et <Text style={styles.boldText}>VALIDER</Text>
+                                     Votre date de rendez-vous              pour              et <Text style={styles.boldText}>VALIDER</Text>
                                 </Text>
-                            </View>
-                        </View>
                     </View>
                     
-                    <Text style={{marginLeft: 350,opacity:0.5,marginTop:10,}}>4j</Text>
+                    
                     <View
                         style={{
                             borderWidth: 1,
@@ -72,16 +70,17 @@ export default function Notification_parent() {
                             borderColor: 'transparent',
                             marginLeft: 30,
                             marginRight: 30,
+                            height:170,
+                            
                         }}>
-                        <View>
-                            <View>
-                                <Text style={{ color: "#000000", fontSize: 13, alignItems: "center", marginTop: -15, opacity: 1, }}>
-                                    Votre date de rendez-vous 2024/10/20 pour Asil Heni et <Text style={styles.boldText}>Annuler</Text>{"\n"}{"\n"}<Text style={styles.boldText}>Note:</Text> Notre calandrier et complet. 
-voici votre proposition des nouveau  dates: 2024/11/03 - 2024/11/06
+                               
+                                <View style={{ color: "#000000", fontSize: 13, alignItems: "center", marginBottom: 15, opacity: 1,marginTop:10 }}>
+                                   <Text style={[styles.boldText,{right:100,fontSize: 15,marginBottom:20}]}>Annuler</Text>
+                                   <Text style={[styles.boldText,{right:108,fontSize: 13}]}>Note:</Text>
+                                    
   
-                                </Text>
-                            </View>
-                        </View>
+                                </View>
+                         
                     </View>
                 </View>
             </ScrollView>

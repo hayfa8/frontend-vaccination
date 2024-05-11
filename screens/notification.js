@@ -2,14 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Header from './header';
 
-export default function Déconnexion({ navigation }) {
-    const handleLogout = () => {
-        // Mettez ici le code pour déconnecter l'utilisateur
-        // Par exemple, vous pouvez effacer les données de session ou faire d'autres opérations de déconnexion
-
-        // Naviguer vers l'écran de connexion
-        navigation.navigate('Login'); // Assurez-vous d'avoir un écran de connexion nommé 'Login' dans votre StackNavigator
-    };
+export default function Notificationpar({ navigation }) {
+   
 
     return (
         <View>
@@ -60,6 +54,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: "white",
         fontSize: 15,
-        fontWeight: "bold"
+        fontWeight: "550"
     },
 });
