@@ -1,5 +1,5 @@
 import React from 'react';
-import {Stacknavmed,Stacknavparent,DrawerH,Accueil,Ajoutvaccins,Consultervacc,ComptesMédecins,ComptesParents,Déconnexion,Login, Inscription3} from './screens';
+import {Stacknavmed,Stacknavparent,DrawerH,Accueil,Ajoutvaccins,Consultervacc,ComptesMédecins,ComptesParents,Déconnexion,Login, Inscription3, Loginadmin} from './screens';
 import Rout from './screens/rootstackadmin';
 
 

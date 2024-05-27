@@ -59,7 +59,7 @@ export default function Loginadmin({navigation}) {
                     
                 }}>
                 <TextInput
-                    placeholder='Numéro mobile ou e-mail'
+                    placeholder='E-mail'
                     style = {{
                         color: "#000000",
                         fontSize: 15,

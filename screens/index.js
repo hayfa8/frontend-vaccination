@@ -30,7 +30,7 @@ import Ajoutvaccins from "./ajoutervaccin";
 import Listevaccins from "./listevaccins";
 import Déconnexion from "./déconnexion";
 import Consultervacc from "./consultervacc";
-import Route from "./rootstackadmin";
+import Rout from "./rootstackadmin";
 import Accueilparent from "./accueilparent";
 import Notificationpar from "./notificationparent";
 import TabNavigator from "./tabparent";
@@ -85,7 +85,7 @@ export {
     Ajoutvaccins,
     Déconnexion,
     Consultervacc,
-    Route,
+    Rout,
     Accueilparent,
     Notificationpar,
     TabNavigator,

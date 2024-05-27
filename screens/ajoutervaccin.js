@@ -5,11 +5,14 @@ import Checkbox from 'expo-checkbox';
 
 export default function Ajoutvaccins() {
     const [isChecked2Mois, setIsChecked2Mois] = useState(false);
+    const [isChecked0, setIsChecked0] = useState(false);
+    const [isChecked3Mois, setIsChecked3Mois] = useState(false);
     const [isChecked4Mois, setIsChecked4Mois] = useState(false);
     const [isChecked6Mois, setIsChecked6Mois] = useState(false);
     const [isChecked11Mois, setIsChecked11Mois] = useState(false);
     const [isChecked12Mois, setIsChecked12Mois] = useState(false);
     const [isChecked1ans, setIsChecked1ans] = useState(false);
+    const [isChecked18Mois, setIsChecked18Mois] = useState(false);
     const handleAjouterPress = () => {
         console.log('Ajout effectué avec succès!');
     };
@@ -240,10 +243,19 @@ export default function Ajoutvaccins() {
 						flexDirection:"row",
                         marginVertical: 4,
 							}}>
-                    <Text style={{marginLeft:60,fontSize:18,color:"black",fontWeight:"bold",bottom:3}}>Ages : </Text>
+                    <Text style={{marginLeft:60,fontSize:18,color:"black",fontWeight:"bold",bottom:3}}>Ages: </Text>
                     <View style={{flexDirection:"row",}}>
 					<Checkbox 
-                        style={{ marginLeft:40,marginTop:4}}
+                        style={{ marginLeft:20,marginTop:4}}
+                        value={isChecked0}
+                        onValueChange={setIsChecked0}
+                        color={isChecked2Mois ? "#007bff" : undefined}   
+						/>
+                    <Text style={{ marginLeft: 5,top:1,fontWeight:"500"}}>A la naissance</Text>
+                    </View>
+                    <View style={{flexDirection:"row",}}>
+					<Checkbox 
+                        style={{ marginLeft:10,marginTop:4}}
                         value={isChecked2Mois}
                         onValueChange={setIsChecked2Mois}
                         color={isChecked2Mois ? "#007bff" : undefined}   
@@ -252,7 +264,16 @@ export default function Ajoutvaccins() {
                     </View>
                     <View style={{flexDirection:"row",}}>
 					<Checkbox 
-                        style={{ marginLeft:40,marginTop:4}}
+                        style={{ marginLeft:10,marginTop:4}}
+                        value={isChecked3Mois}
+                        onValueChange={setIsChecked3Mois}
+                        color={isChecked2Mois ? "#007bff" : undefined}   
+						/>
+                    <Text style={{ marginLeft:5,top:1,fontWeight:"500"}}>3 mois </Text>
+                    </View>
+                    <View style={{flexDirection:"row",}}>
+					<Checkbox 
+                        style={{ marginLeft:10,marginTop:4}}
                         value={isChecked4Mois}
                         onValueChange={setIsChecked4Mois}
                         color={isChecked4Mois ? "#007bff" : undefined}  
@@ -261,7 +282,7 @@ export default function Ajoutvaccins() {
                     </View>
                     <View style={{flexDirection:"row",}}>
 					<Checkbox 
-                        style={{ marginLeft:40,marginTop:4}}
+                        style={{ marginLeft:10,marginTop:4}}
                         value={isChecked6Mois}
                         onValueChange={setIsChecked6Mois}
                         color={isChecked6Mois ? "#007bff" : undefined}  
@@ -270,7 +291,7 @@ export default function Ajoutvaccins() {
                     </View>
                     <View style={{flexDirection:"row",}}>
 					<Checkbox 
-                        style={{ marginLeft:40,marginTop:4}}
+                        style={{ marginLeft:10,marginTop:4}}
                         value={isChecked11Mois}
                         onValueChange={setIsChecked11Mois}
                         color={isChecked11Mois ? "#007bff" : undefined}  
@@ -279,7 +300,7 @@ export default function Ajoutvaccins() {
                     </View>
                     <View style={{flexDirection:"row",}}>
 					<Checkbox 
-                        style={{ marginLeft:40,marginTop:4}}
+                        style={{ marginLeft:10,marginTop:4}}
                         value={isChecked12Mois}
                         onValueChange={setIsChecked12Mois}
                         color={isChecked12Mois ? "#007bff" : undefined}    
@@ -288,12 +309,12 @@ export default function Ajoutvaccins() {
                     </View>
                     <View style={{flexDirection:"row",}}>
 					<Checkbox 
-                        style={{ marginLeft:40,marginTop:4}}
-                        value={isChecked1ans}
-                        onValueChange={setIsChecked1ans}
-                        color={isChecked1ans ? "#007bff" : undefined}    
+                        style={{ marginLeft:10,marginTop:4}}
+                        value={isChecked18Mois}
+                        onValueChange={setIsChecked18Mois}
+                        color={isChecked2Mois ? "#007bff" : undefined}   
 						/>
-                    <Text style={{ marginLeft:5,top:1,fontWeight:"500"}}>1 ans </Text>
+                    <Text style={{ marginLeft:5,top:1,fontWeight:"500"}}>18 mois </Text>
                     </View>
                 </View>
                 <View 
@@ -339,7 +360,7 @@ export default function Ajoutvaccins() {
                         fontWeight: "bold",
                         
                         }}>
-                    {" Se connecter"}
+                    {" Ajouter "}
                     </Text>
                 </TouchableOpacity>
             </View>
