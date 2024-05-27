@@ -25,7 +25,7 @@ export default function Listevaccins({navigation}) {
                 <Ionicons name='eye' size={24} color="magenta" style={{right:120}} onPress={() => navigation.navigate('Consultervacc')}/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons} >
-                <MaterialIcons name="edit" size={24} color="magenta" style={{right:100}} />
+                <MaterialIcons name="edit" size={24} color="magenta" style={{right:100}}  onPress={() => navigation.navigate('Modifvacc')} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons}>
                 <MaterialIcons name="delete" size={24} color="magenta" style={{right:87}} /> 
@@ -40,7 +40,7 @@ export default function Listevaccins({navigation}) {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={styles.header}>
-          <Image style={styles.home} source={require('../assets/vaccin.png')} />
+          <Image style={styles.home} source={require('../assets/vaccinn.png')} />
           <Text style={styles.headerText}>Liste des vaccins</Text>
         </View>
         <View style={styles.table}>

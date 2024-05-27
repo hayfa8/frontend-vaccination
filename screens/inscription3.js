@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {SafeAreaView, ScrollView,Image ,StyleSheet, Text, View, TextInput, TouchableOpacity,Button} from 'react-native';
+import {SafeAreaView, ScrollView,Image ,StyleSheet, Text, View, TextInput, TouchableOpacity,Button,StatusBar} from 'react-native';
 import { useState, useEffect } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import Checkbox from 'expo-checkbox';
@@ -8,7 +8,7 @@ import  * as ImagePicker  from 'expo-image-picker';
 
 
 
-export default function Inscription3() {
+export default function Inscription3({navigation}) {
     const [selectedOption, setSelectedOption] = useState(null);
     const [ IsPasswordShown, setIsPasswordShown] = React.useState(false);
     const [isChecked,setIsChecked] = useState(false);
@@ -45,6 +45,7 @@ export default function Inscription3() {
             flex: 1,
             
         }}>
+           <StatusBar  backgroundColor="white" barStyle="dark-content" />
         <ScrollView
             style = {{
                 flex: 1,
@@ -57,7 +58,7 @@ export default function Inscription3() {
                     paddingTop: 50,
                     paddingBottom: 50,
                     top:-10,
-                    height:960,
+                    height:980,
                     
                 }}>
                 <Text 
@@ -344,7 +345,7 @@ export default function Inscription3() {
               <Text style={{right:-10,top:-20,fontSize:13,}}>J'accepte les conditions d'utilisation. </Text>
             </View>
 					</View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() =>navigation.navigate("Login")}>
 					<View 
 						style = {{
 							width: 200,
@@ -354,7 +355,7 @@ export default function Inscription3() {
 							borderRadius: 60,
 							paddingVertical: 10,
 							marginHorizontal: 80,
-              top:-50,
+              bottom:30,
               right:-20,
 						}}>
 						<Text 

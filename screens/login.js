@@ -21,13 +21,13 @@ export default function Login({navigation}) {
         style = {{
             flex: 1,
             backgroundColor: "#9dd0ff",
-            pointerEvents: "none",
             
         }}>
         <View 
             style = {{
                 paddingTop: 350,
                 paddingBottom: 95,
+                height:800
                
             }}>
             <View 
@@ -41,7 +41,7 @@ export default function Login({navigation}) {
                     opacity: 0.7,
                 }}>
                 <TextInput
-                    placeholder='Numéro mobile ou e-mail'
+                    placeholder='E-mail'
                     style = {{
                         color: "#000000",
                         fontSize: 15,
@@ -135,6 +135,7 @@ export default function Login({navigation}) {
                     </Text>
                 </TouchableOpacity>
             </View>
+            <TouchableOpacity onPress={()=> navigation.navigate("Initmod1_2")}>
             <Text 
                 style = {{
                     color: "#E937E2",
@@ -145,6 +146,7 @@ export default function Login({navigation}) {
                 }}>
                 {"Mot de passe oublié ?"}
             </Text>
+            </TouchableOpacity>
             <Image
 						source ={require('../assets/colors.png')} 
 						style = {{

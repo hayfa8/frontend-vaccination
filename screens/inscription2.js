@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {SafeAreaView, ScrollView,StyleSheet, RadioForm, Text, View, TextInput, TouchableOpacity} from 'react-native';
+import {SafeAreaView, ScrollView,StyleSheet, RadioForm, Text, View, TextInput, TouchableOpacity,StatusBar} from 'react-native';
 import{ useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import Checkbox from 'expo-checkbox';
 
-export default function Inscription2() {
+export default function Inscription2({navigation}) {
     const [selectedOption, setSelectedOption] = useState(null);
     const [ IsPasswordShown, setIsPasswordShown] = React.useState(false);
     const [isChecked,setIsChecked] = useState(false);
@@ -31,6 +31,7 @@ export default function Inscription2() {
             
  
         }}>
+             <StatusBar  backgroundColor="white" barStyle="dark-content" />
         <ScrollView
             style = {{
                 flex: 1,
@@ -42,7 +43,7 @@ export default function Inscription2() {
                     paddingTop: 50,
                     paddingBottom: 50,
                     top:-10,
-                    height:900
+                    height:800
                     
                 }}>
                 <Text 
@@ -141,26 +142,6 @@ export default function Inscription2() {
 							
 					</TextInput>
 				</View>
-                <View style={styles.container}>
-            <TextInput
-                placeholder='Numéro de dossier médical'
-                keyboardType='numeric'
-                style={styles.input}
-                value={numDossier}
-                onChangeText={text => setNumDossier(text)}
-            />
-            <TouchableOpacity onPress={addMedicalRecord}>
-                <Ionicons name='add' size={20} style={styles.icon} />
-            </TouchableOpacity>
-            {numDossiersList.map((num, index) => (
-                <View key={index} style={styles.itemContainer}>
-                    <Text style={styles.itemText}>{num}</Text>
-                    <TouchableOpacity onPress={() => removeMedicalRecord(index)}>
-                        <Ionicons name='close' size={20} style={styles.icon} />
-                    </TouchableOpacity>
-                </View>
-            ))}
-        </View>
                 <View 
 					style = {{
 						backgroundColor: "#ffffff",
@@ -296,7 +277,7 @@ export default function Inscription2() {
                             <Text style={{right:-10,top:-20,fontSize:13,}}>J'accepte les conditions d'utilisation. </Text>
                         </View>
 					</View>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() =>navigation.navigate("Login")}>
 					<View 
 						style = {{
 							width: 200,
@@ -306,7 +287,7 @@ export default function Inscription2() {
 							borderRadius: 60,
 							paddingVertical: 10,
 							marginHorizontal: 80,
-                            top:-50,
+                            bottom:30,
                             right:-20,
 						}}>
 						<Text 

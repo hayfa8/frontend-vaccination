@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-nativ
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'react-native';
 
-const Initmod3_2 = () => {
+const Initmod3_2 = ({navigation}) => {
   const [verificationCode, setVerificationCode] = useState('');
   
   const [timer, setTimer] = useState(60); 
@@ -86,7 +86,7 @@ const Initmod3_2 = () => {
           {timerActive ? `Renvoyer en ${timer} secondes` : 'Renvoyer le code'}
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.suivButton}>
+      <TouchableOpacity style={styles.suivButton}  onPress={() =>navigation.navigate("Initmod4")}>
         <Text style={styles.suivButtonText}>Suivant</Text>
       </TouchableOpacity>
     </View>

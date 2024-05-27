@@ -106,7 +106,7 @@ export default function Loginadmin({navigation}) {
                 
             </View>
             <View>
-                <TouchableOpacity onPress={() => navigation.navigate('DrawerH')} style = {{
+                <TouchableOpacity style = {{
                     alignItems: "center",
                     backgroundColor: "#2578F5",
                     borderRadius: 60,

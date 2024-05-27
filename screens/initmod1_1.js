@@ -60,7 +60,7 @@ export default function Initmod1_1({navigation}) {
                     }}>
                 </TextInput>
             </View>
-            <TouchableOpacity onPress={() =>navigation.navigate("initmod1_2")} >
+            <TouchableOpacity >
             <Text style = {{
                     color: "#0D45A1",
                     fontSize: 12,
@@ -79,7 +79,9 @@ export default function Initmod1_1({navigation}) {
                     marginHorizontal: 100,
                     opacity: 0.8,
                     
-                }}>
+                }}
+                onPress={() =>navigation.navigate("Initmod1_2")} 
+                >
                     <Text 
                         style = {{
                         color: "#FFFFFF",

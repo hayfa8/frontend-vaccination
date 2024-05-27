@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { StyleSheet, View, SafeAreaView, Image, Text, TouchableOpacity, TextInput } from 'react-native';
 import 'react-native-gesture-handler';
-import { NavigationContainer, } from '@react-navigation/native';
 import { DrawerItemList, createDrawerNavigator } from '@react-navigation/drawer';
 import Accueil from './accueiladmin';
 import ComptesMédecins from './comptesmédecins';
 import ComptesParents from './comptesparents';
-import Déconnexion from './déconnexion';
+import DéconnexionAdmin from './déconnectionadmin';
 import Ajoutvaccins from './ajoutervaccin';
 import Listevaccins from './listevaccins';
 import { FontAwesome5, Entypo, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
@@ -16,7 +15,7 @@ import { Icon } from 'react-native-elements';
 
 const Drawer = createDrawerNavigator();
 
-export default function DrawerH() {
+export default function DrawerH({navigation}) {
 
   return (
       <Drawer.Navigator
@@ -107,21 +106,15 @@ export default function DrawerH() {
                 flexDirection: 'row',
                 alignItems: 'center',
               }}>
-              <TouchableOpacity>
-                <FontAwesome name="bell" size={22} color="#635F5F" style={{ left: 30 }} />
+              <TouchableOpacity onPress={()=> navigation.navigate("Notifadm")}>
+                <FontAwesome name="bell" size={22} color="#635F5F" style={{ marginRight:140}} />
               </TouchableOpacity>
-              <View style={styles.container}>
-                <Icon name="search" type="font-awesome" color="#635F5F" size={18} />
-                <TextInput
-                  style={styles.input}
-                  placeholder=" Rechercher..."
-                />
-              </View>
               <View style={{
                 flexDirection: "row",
                 alignItems: 'center',
+                marginLeft:50
               }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=> navigation.navigate("Profiladmin")}>
                   <Image
                     source={require('../assets/Avatar.png')}
                     style={{
@@ -238,7 +231,7 @@ export default function DrawerH() {
         })}
         />
 
-        <Drawer.Screen name="Déconnexion" component={Déconnexion} options={{
+        <Drawer.Screen name="DéconnexionAdmin" component={DéconnexionAdmin} options={{
           drawerLabel: "Déconnexion",
           title: "",
           headerShadowVisible: false,

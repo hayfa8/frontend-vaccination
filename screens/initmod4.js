@@ -4,8 +4,8 @@ import { StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-export default function initmod4() {
-    const [ IsPasswordShown, setIsPasswordShown] = React.useState(false);
+export default function Initmod4({navigation}) {
+   
   return (
     <SafeAreaView 
     style = {{
@@ -90,7 +90,9 @@ export default function initmod4() {
                     marginHorizontal: 100,
                     opacity: 0.8,
                     
-                }}>
+                }}
+                onPress={() =>navigation.navigate("Login")}
+                >
                     <Text 
                         style = {{
                         color: "#FFFFFF",

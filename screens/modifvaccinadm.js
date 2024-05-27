@@ -3,7 +3,7 @@ import {SafeAreaView, ScrollView,Image ,StyleSheet, Text, View, TextInput, Touch
 import{ useState } from 'react';
 import Checkbox from 'expo-checkbox';
 
-export default function Ajoutvaccins() {
+export default function Modifvacc() {
     const [isChecked2Mois, setIsChecked2Mois] = useState(false);
     const [isChecked4Mois, setIsChecked4Mois] = useState(false);
     const [isChecked6Mois, setIsChecked6Mois] = useState(false);
@@ -33,9 +33,8 @@ export default function Ajoutvaccins() {
                     paddingBottom: 50,
                     top:-10,
                     height:960,
-                    marginHorizontal:150,
-                    borderRadius:25
-
+                    marginHorizontal:300,
+                    borderRadius:25    
                 }}>
                 <View 
                     style = {{
@@ -49,7 +48,6 @@ export default function Ajoutvaccins() {
                         marginHorizontal: 32,
                     }}>
                     <TextInput
-                        placeholder='  Identifiant' 
                         style = {{
                             color: "black",
                             fontSize: 15,
@@ -71,7 +69,27 @@ export default function Ajoutvaccins() {
                         marginHorizontal: 32,
                     }}>
                     <TextInput
-                        placeholder='  Date de creation de vaccin' 
+                        style = {{
+                            color: "black",
+                            fontSize: 15,
+                            fontWeight: "bold",
+                            opacity:0.8,
+                            outlineStyle: 'none'
+                        }}>
+                    </TextInput>
+                </View>
+                <View 
+                    style = {{
+                        backgroundColor: "#ffffff",
+                        borderColor: "#7776c7",
+                        borderRadius:10,
+                        borderWidth: 1,
+                        paddingVertical: 11,
+                        paddingHorizontal: 7,
+                        marginBottom: 31,
+                        marginHorizontal: 32,
+                    }}>
+                    <TextInput 
                         style = {{
                             color: "black",
                             fontSize: 15,
@@ -93,7 +111,6 @@ export default function Ajoutvaccins() {
                         marginHorizontal: 32,
                     }}>
                     <TextInput
-                        placeholder='  Nom de vaccin' 
                         style = {{
                             color: "black",
                             fontSize: 15,
@@ -115,7 +132,6 @@ export default function Ajoutvaccins() {
                         marginHorizontal: 32,
                     }}>
                     <TextInput
-                        placeholder='  Type de vaccin' 
                         style = {{
                             color: "black",
                             fontSize: 15,
@@ -137,7 +153,6 @@ export default function Ajoutvaccins() {
                         marginHorizontal: 32,
                     }}>
                     <TextInput
-                        placeholder='  Numéro de lot' 
                         style = {{
                             color: "black",
                             fontSize: 15,
@@ -159,7 +174,27 @@ export default function Ajoutvaccins() {
                         marginHorizontal: 32,
                     }}>
                     <TextInput
-                        placeholder='  pays' 
+                        style = {{
+                            color: "black",
+                            fontSize: 15,
+                            fontWeight: "bold",
+                            opacity:0.8,
+                            outlineStyle: 'none'
+                        }}>
+                    </TextInput>
+                </View>
+                <View 
+                    style = {{
+                        backgroundColor: "#ffffff",
+                        borderColor: "#7776c7",
+                        borderRadius:10,
+                        borderWidth: 1,
+                        paddingVertical: 11,
+                        paddingHorizontal: 7,
+                        marginBottom: 31,
+                        marginHorizontal: 32,
+                    }}>
+                    <TextInput 
                         style = {{
                             color: "black",
                             fontSize: 15,
@@ -181,51 +216,6 @@ export default function Ajoutvaccins() {
                         marginHorizontal: 32,
                     }}>
                     <TextInput
-                        placeholder='  Dosage' 
-                        style = {{
-                            color: "black",
-                            fontSize: 15,
-                            fontWeight: "bold",
-                            opacity:0.8,
-                            outlineStyle: 'none'
-                        }}>
-                    </TextInput>
-                </View>
-                <View 
-                    style = {{
-                        backgroundColor: "#ffffff",
-                        borderColor: "#7776c7",
-                        borderRadius:10,
-                        borderWidth: 1,
-                        paddingVertical: 11,
-                        paddingHorizontal: 7,
-                        marginBottom: 31,
-                        marginHorizontal: 32,
-                    }}>
-                    <TextInput
-                        placeholder='  Numéro de série' 
-                        style = {{
-                            color: "black",
-                            fontSize: 15,
-                            fontWeight: "bold",
-                            opacity:0.8,
-                            outlineStyle: 'none'
-                        }}>
-                    </TextInput>
-                </View>
-                <View 
-                    style = {{
-                        backgroundColor: "#ffffff",
-                        borderColor: "#7776c7",
-                        borderRadius:10,
-                        borderWidth: 1,
-                        paddingVertical: 11,
-                        paddingHorizontal: 7,
-                        marginBottom: 31,
-                        marginHorizontal: 32,
-                    }}>
-                    <TextInput
-                        placeholder="   Lieu d'administration"
                         style = {{
                             color: "black",
                             fontSize: 15,
@@ -308,7 +298,6 @@ export default function Ajoutvaccins() {
                         marginTop:25
                     }}>
                     <TextInput
-                        placeholder="   Description"
                         multiline={true}
                         numberOfLines={3}
                         style = {{
@@ -361,8 +350,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 20,
         paddingHorizontal: 10,
-        marginBottom: 20,
-        bottom: 20,
+        marginLeft:120,
         right: 30,
       },
       headerText: {
@@ -375,9 +363,10 @@ const styles = StyleSheet.create({
       home: {
         height: 60,
         width: 60,
-        top: 23,
+        top: 20,
         left: 120,
         marginBottom: 30,
+        marginTop:10,
       },
   });
 

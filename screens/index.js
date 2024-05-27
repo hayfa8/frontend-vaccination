@@ -32,12 +32,11 @@ import Déconnexion from "./déconnexion";
 import Consultervacc from "./consultervacc";
 import Route from "./rootstackadmin";
 import Accueilparent from "./accueilparent";
-import Drawerparent from "./satcknavparent";
 import Notificationpar from "./notificationparent";
 import TabNavigator from "./tabparent";
 import Profilparent from "./profilparent";
 import Dossiershistorique from "./dossiershistorique";
-import Stacknavparent from "./satcknavparent";
+import Stacknavparent from "./satcknavusers";
 import DoctorTabNavigator from "./tabdoctor";
 import Consulter_vaccinmed from "./consultervaccinmed";
 import Stacknavmed from "./stacknavmed";
@@ -45,6 +44,10 @@ import Headermed from "./headermed";
 import Déconnexionmed from "./déconnexionmed";
 import Profilmed from "./profilmed";
 import Consultdossmed from "./consultdossmed";
+import DéconnexionAdmin from "./déconnectionadmin";
+import Modifvacc from "./modifvaccinadm";
+import Profiladmin from "./profiladmi";
+import Notifadm from "./notifadm";
 
 
 
@@ -96,6 +99,10 @@ export {
     Déconnexionmed,
     Profilmed,
     Consultdossmed,
+    DéconnexionAdmin,
+    Modifvacc,
+    Profiladmin,
+    Notifadm
 
 
 

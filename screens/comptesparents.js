@@ -27,7 +27,8 @@ export default function ComptesParents() {
         <View style={styles.userItem}>
           <Image style={styles.avatar} source={user.avatar} />
           <View style={styles.userData}>
-            <Text style={styles.userInfo1}>{user.nom} {user.prenom}</Text>
+            <Text style={styles.userInfo1}>{user.nom}</Text>
+            <Text style={styles.userInfo4}>{user.prenom}</Text>
             <Text style={styles.userInfo2}>{user.email}</Text>
             <Text style={styles.userInfo3}>{user.ville}</Text>
           </View>
@@ -53,7 +54,8 @@ export default function ComptesParents() {
         <View style={styles.table}>
           <View style={styles.labels}>
             <Text style={styles.label1}>Avatar</Text>
-            <Text style={styles.label2}>Nom et Prénom</Text>
+            <Text style={styles.label2}>Nom</Text>
+            <Text style={styles.label5}>Prénom</Text>
             <Text style={styles.label3}>Email</Text>
             <Text style={styles.label4}>Country</Text>
           </View>
@@ -146,13 +148,19 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     paddingHorizontal: 5,
-    left:28,
+    right:20,
   },
   userInfo3: {
     flex: 1,
     textAlign: 'center',
     paddingHorizontal: 5,
-    right:35,
+    right:55,
+  },
+   userInfo4: {
+    flex: 1,
+    textAlign: 'center',
+    paddingHorizontal: 5,
+    right:25,
   },
   separator: {
     height: 10,
@@ -184,7 +192,7 @@ const styles = StyleSheet.create({
     width: '20%',
     paddingVertical: 5,
     color: '#333',
-    right:113,
+    right:90,
     fontSize:14,
   },
   label3: {
@@ -203,6 +211,15 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     color: '#333',
     right:199,
+    fontSize:15,
+  },
+  label5: {
+    fontWeight: 'bold',
+    textAlign: 'center',
+    width: '20%',
+    paddingVertical: 5,
+    color: '#333',
+    right:160,
     fontSize:15,
   },
 });
