@@ -9,10 +9,7 @@ import ComptesMédecins from "./comptesmédecins";
 import ComptesParents from "./comptesparents";
 import DrawerH from "./drawerhope";
 import Loginadmin from "./loginadmin";
-import Initmod1_1 from "./initmod1_1";
 import Initmod1_2 from "./initmod1_2";
-import Initmod2 from "./initmod2";
-import Initmod3_1 from "./initmod3_1";
 import Initmod3_2 from "./initmod3_2";
 import Initmod4 from "./initmod4";
 import Accueilmed from "./accueilmed"
@@ -32,7 +29,6 @@ import Déconnexion from "./déconnexion";
 import Consultervacc from "./consultervacc";
 import Rout from "./rootstackadmin";
 import Accueilparent from "./accueilparent";
-import Notificationpar from "./notificationparent";
 import TabNavigator from "./tabparent";
 import Profilparent from "./profilparent";
 import Dossiershistorique from "./dossiershistorique";
@@ -48,6 +44,7 @@ import DéconnexionAdmin from "./déconnectionadmin";
 import Modifvacc from "./modifvaccinadm";
 import Profiladmin from "./profiladmi";
 import Notifadm from "./notifadm";
+import Verifycode from "./verifycode";
 
 
 
@@ -64,10 +61,7 @@ export {
     ComptesParents,
     DrawerH,
     Loginadmin,
-    Initmod1_1,
     Initmod1_2,
-    Initmod2,
-    Initmod3_1,
     Initmod3_2,
     Initmod4,
     Accueilmed,
@@ -87,7 +81,6 @@ export {
     Consultervacc,
     Rout,
     Accueilparent,
-    Notificationpar,
     TabNavigator,
     Profilparent,
     Dossiershistorique,
@@ -102,7 +95,8 @@ export {
     DéconnexionAdmin,
     Modifvacc,
     Profiladmin,
-    Notifadm
+    Notifadm,
+    Verifycode,
 
 
 

@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-nativ
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'react-native';
 
-const Initmod3_1 = () => {
+const Verifycode = () => {
   const [verificationCode, setVerificationCode] = useState('');
   
   const [timer, setTimer] = useState(60); 
@@ -61,9 +61,9 @@ const Initmod3_1 = () => {
     }}>
         <StatusBar  backgroundColor="white" barStyle="dark-content" />
     <View style={styles.container}>
-      <Text style={styles.title}>SMS Verification</Text>
+      <Text style={styles.title}>Email Verification</Text>
       <Text style={styles.instructions}>
-      Écrivez le code que vous allez recevoir sur ce numéro : +216*****179
+        Écrivez le code que vous allez recevoir sur votre adresse email
       </Text>
       <View style={styles.codeContainer}>
         {[0, 1, 2, 3].map((index) => (
@@ -77,15 +77,6 @@ const Initmod3_1 = () => {
           />
         ))}
       </View>
-      <TouchableOpacity
-        style={[styles.resendButton, timerActive && styles.resendButtonDisabled]}
-        disabled={timerActive}
-        onPress={handleResendCode}
-      >
-        <Text style={styles.resendButtonText}>
-          {timerActive ? `Renvoyer en ${timer} secondes` : 'Renvoyer le code'}
-        </Text>
-      </TouchableOpacity>
       <TouchableOpacity style={styles.suivButton}>
         <Text style={styles.suivButtonText}>Suivant</Text>
       </TouchableOpacity>
@@ -100,6 +91,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FEE0FF',
+    
     padding: 20,
   },
   title: {
@@ -163,4 +155,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Initmod3_1;
+export default Verifycode;

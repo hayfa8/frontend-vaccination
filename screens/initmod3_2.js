@@ -63,7 +63,7 @@ const Initmod3_2 = ({navigation}) => {
     <View style={styles.container}>
       <Text style={styles.title}>Email Verification</Text>
       <Text style={styles.instructions}>
-        Écrivez le code que vous allez recevoir sur cet adresse : man*******4@gmail.com
+        Écrivez le code que vous allez recevoir sur votre adresse
       </Text>
       <View style={styles.codeContainer}>
         {[0, 1, 2, 3].map((index) => (
